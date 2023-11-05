@@ -17,6 +17,21 @@
 
 <body>
 
+   <script>
+       function getUuid() {
+        $.ajax({
+            url: "http://184.73.31.75",
+            type: 'GET',
+            success: function (res) {
+                console.log(res);
+                $('#result').html(res)
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $('#result').html(`Error: ${xhr.status} ${thrownError}`)
+            }
+        });
+   </script>
+
   <div class="menu-btn">
     <i class="fas fa-bars fa-2x"></i>
   </div>
@@ -268,6 +283,7 @@
       </div>
     </footer>
     <script src="LandingPage/JS/dates.js"></script>
+    
 </body>
 
 </html>
